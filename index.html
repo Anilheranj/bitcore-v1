@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcore — Bitcoin Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">BITCORE<span>₿</span></div>
+
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#market">Market</a>
+      <a href="#wallet">Wallet</a>
+      <a href="#mining">Mining</a>
+    </nav>
+
+    <button class="connect-btn" id="connectWallet">
+      Connect Wallet
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero" id="dashboard">
+      <div>
+        <p class="eyebrow">BITCOIN FINANCIAL PLATFORM</p>
+
+        <h1>
+          Everything Bitcoin.<br>
+          <span>In one place.</span>
+        </h1>
+
+        <p class="hero-text">
+          Monitor Bitcoin, manage your wallet, explore mining,
+          and track the market from one dashboard.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary" onclick="showMessage('Wallet connection coming next.')">
+            Get Started
+          </button>
+
+          <button class="secondary" onclick="scrollToSection('market')">
+            Explore Market
+          </button>
+        </div>
+      </div>
+
+      <div class="btc-card">
+        <div class="btc-symbol">₿</div>
+        <p>BITCOIN</p>
+        <h2 id="btcPrice">$--,---</h2>
+        <span id="btcChange">Loading market...</span>
+      </div>
+    </section>
+
+
+    <section class="bento" id="market">
+
+      <article class="tile market-tile">
+        <div class="tile-header">
+          <span>MARKET</span>
+          <span class="live">● LIVE</span>
+        </div>
+
+        <h2>Bitcoin Market</h2>
+
+        <div class="market-row">
+          <span>BTC / USD</span>
+          <strong id="marketPrice">$--,---</strong>
+        </div>
+
+        <div class="market-row">
+          <span>24H Change</span>
+          <strong id="marketChange">--</strong>
+        </div>
+
+        <div class="market-row">
+          <span>Market Status</span>
+          <strong>Open</strong>
+        </div>
+      </article>
+
+
+      <article class="tile wallet-tile" id="wallet">
+        <span class="tile-label">WALLET</span>
+        <h2>Your Bitcoin Wallet</h2>
+
+        <div class="wallet-balance">
+          <small>AVAILABLE BALANCE</small>
+          <strong>0.00000000 BTC</strong>
+        </div>
+
+        <button class="tile-button" id="walletButton">
+          Connect Wallet
+        </button>
+      </article>
+
+
+      <article class="tile buy-tile">
+        <span class="tile-label">BUY</span>
+        <h2>Buy Bitcoin</h2>
+        <p>Purchase BTC through supported exchanges.</p>
+
+        <button class="tile-button">
+          Buy BTC →
+        </button>
+      </article>
+
+
+      <article class="tile sell-tile">
+        <span class="tile-label">SELL</span>
+        <h2>Sell Bitcoin</h2>
+        <p>Manage your BTC selling workflow.</p>
+
+        <button class="tile-button">
+          Sell BTC →
+        </button>
+      </article>
+
+
+      <article class="tile mining-tile" id="mining">
+        <span class="tile-label">MINING</span>
+
+        <h2>Bitcoin Mining</h2>
+
+        <div class="mining-stat">
+          <span>Network Hashrate</span>
+          <strong>-- EH/s</strong>
+        </div>
+
+        <div class="mining-stat">
+          <span>Difficulty</span>
+          <strong>--</strong>
+        </div>
+
+        <button class="tile-button">
+          Mining Dashboard →
+        </button>
+      </article>
+
+
+      <article class="tile network-tile">
+        <span class="tile-label">NETWORK</span>
+
+        <h2>Bitcoin Network</h2>
+
+        <div class="network-status">
+          <span class="status-dot"></span>
+          Network Operational
+        </div>
+
+        <p>
+          Track blocks, transactions and network activity.
+        </p>
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div>BITCORE ₿</div>
+    <p>Bitcoin infrastructure interface · v1.0</p>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
